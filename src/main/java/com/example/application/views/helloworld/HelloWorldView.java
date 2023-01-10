@@ -13,7 +13,6 @@ import javax.annotation.security.RolesAllowed;
 
 @PageTitle("Hello World")
 @Route(value = "hello", layout = MainLayout.class)
-@RouteAlias(value = "", layout = MainLayout.class)
 @RolesAllowed("ADMIN")
 public class HelloWorldView extends HorizontalLayout {
 

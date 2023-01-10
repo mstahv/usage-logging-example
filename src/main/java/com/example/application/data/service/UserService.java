@@ -1,6 +1,8 @@
 package com.example.application.data.service;
 
 import com.example.application.data.entity.User;
+
+import java.util.List;
 import java.util.Optional;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -34,6 +36,10 @@ public class UserService {
 
     public Page<User> list(Pageable pageable, Specification<User> filter) {
         return repository.findAll(filter, pageable);
+    }
+
+    public List<User> list() {
+        return repository.findAll();
     }
 
     public int count() {

@@ -83,6 +83,9 @@ public class MainLayout extends AppLayout {
             nav.addItem(new AppNavItem("Master-Detail", MasterDetailView.class, "la la-columns"));
 
         }
+        if (accessChecker.hasAccess(UsageLogView.class)) {
+            nav.addItem(new AppNavItem("Usage Log", UsageLogView.class, "la la-columns"));
+        }
 
         return nav;
     }
