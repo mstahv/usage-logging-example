@@ -1,7 +1,13 @@
-# My App
+# Vaadin usage logging example
 
-This project can be used as a starting point to create your own Vaadin application with Spring Boot.
-It contains all the necessary configuration and some placeholder files to get you started.
+A trivial in-app usage logging example, built on top of a start.vaadin.com template:
+
+ * On each view enter, we log ip address, view, timestamp & user
+ * The data is stored with JPA to RDBMS through Spring Data
+ * There is a trivial view to browse the log. 
+ * The log view also shows the city based on ip-api.com responses. The service caches responses using Spring's Cacheable annotation.
+
+See the actual logging part form [this changeset](https://github.com/mstahv/usage-logging-example/commit/61f83b2f234639d29f9ac0d824cc23248273c96b). Ignore all ".json" file changes, those are irrelevant.
 
 ## Running the application
 
